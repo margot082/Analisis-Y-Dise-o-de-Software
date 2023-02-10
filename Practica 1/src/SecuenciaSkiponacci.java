@@ -25,10 +25,20 @@ public class SecuenciaSkiponacci
      * @param n (int): Tamaño de la secuencia que se quiere crear  
      */
     public SecuenciaSkiponacci(int first, int second, List<Integer> init, int n)
-    {
+    {   
+        /*Control de errores*/
+        if(first <= 0 || second <= 0 
+            || first > init.size() || second > init.size())
+        {
+            return;
+        }
+
+        /*Asignacion de valores a atributos*/
         this.first = first;
         this.second = second;
         this.sequence = new ArrayList<>(init);
+
+        /*Creacion de la secuecnia*/
         while(this.sequence.size() < n) 
         {
             this.next();
@@ -65,14 +75,19 @@ public class SecuenciaSkiponacci
      * Metodo que comprueba si la secuencia pasada como argumento es del mismo
      * tipo que la secuencia del objeto.
      * 
-     * 
      * @param seq (List<Integer>): Secuencia a comprobar
      * @return (boolean): true si son del mismo tipo, false si no lo son
+     * 
+     * NOTA:
+     *  Si la secuencia pasada de argumento esta vacia el resultado es siempre false
      */
     public boolean esSecuencia(List<Integer> seq) 
     {   
         /*Tamaño de la secuencia a comprobar*/
         int n = seq.size();
+
+        /*Control de secuencias vacias*/
+        if(n == 0) return false;
         
         /*Si la secuencia del objeto es mas corta que la secuencia a comprobar
          * Se genera una nueva secuencia a partir de la del objeto pero de tamaño n
