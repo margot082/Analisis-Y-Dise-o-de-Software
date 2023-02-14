@@ -1,18 +1,15 @@
-Cuestión del Apartado 3:
-
-Al introducir números cuyo valor es inferior a 3, el programa realiza un correcto control de errores y muestra el mensaje "Longitud [valor] incorrecta" por pantalla.
+Cuestiones del Apartado 3:
+Al introducir números cuyo valor es inferior a 3, el programa realiza un correcto control de errores y muestra el mensaje "Longitud [valor] incorrecto" por pantalla.
 
 Al pasarle al programa varios parámetros estos se ejecutan uno detrás de otro. 
 
-Al no introducir parametros el programa muestra los mensajes "true\n false" los cuales muestra siempre al finalizar la ejecución.
+Al no introducir parámetros el programa muestra los mensajes "true\n false" los cuales muestra siempre al finalizar la ejecución.
 
-Finalmente al introducir caracteres como por ejemplo "a" o numeros decimales como 5.5, nos da un error de ejcución, por lo tanto, 
-debería implementarse un control de errores que detecte que el argumento de entrada sea un entero y te de un mensaje de error.
+Finalmente al introducir caracteres como por ejemplo "a" o números decimales cómo 5.5, nos da un error de ejecución, por lo tanto, debería implementarse un control de errores que detecte que el argumento de entrada sea un entero y te de un mensaje de error.
 
-Como mejoras es necesario realizar un mejor control de errores, para gestionar correctamente los parametros erróneos asi como la falta de estos (dandole al usuario
-la forma de usar el programa correctamente). También se debería evitar mostrar siempre "true\n false" al terminar la ejecucion debido a que esta informacion no es relevante para el usuario.
+Como mejoras es necesario realizar un mejor control de errores, para gestionar correctamente los parámetros erróneos así como la falta de estos (dándole al usuario la forma de usar el programa correctamente). También se debería evitar mostrar siempre "true\n false" al terminar la ejecución debido a que esta información no es relevante para el usuario.
 
-Cuestión del apartado 4:
+Cuestiones de Apartado 4:
+El método esSecuencia es un método de objeto, debido a que su resultado depende de sobre qué objeto se llame. Esto se puede observar dentro del código mediante la utilización de ‘this’ que hace referencia al objeto, si en cambio fuera un método de clase este sería estático, marcado mediante el uso de ‘static’ como se realiza en el método de esPadovan de SecuenciaPadovan.java. 
 
-El método esSecuencia() de este apartado es de objeto, ya que no ha sido declarado con "static". Además, según está implementado el código, si se declarara como método de clase
-daría error de compilación.
+Es necesario que el método sea de objeto debido a que cada objeto puede ser un tipo de secuencia diferente, por tanto el método esSecuencia debe cambiar según el objeto desde el que se realice la llamada.
