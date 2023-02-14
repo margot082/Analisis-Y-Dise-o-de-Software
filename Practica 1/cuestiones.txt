@@ -1,10 +1,18 @@
-Cuestuones de Apartado 3:
-Al introducir numeros cuyo valor es inferior a 3, el programa realiza un correcto control de errores y muestra el mensaje "Longitud [valor] incorrecta" por pantalla.
+Cuestión del Apartado 3:
 
-Al pasarle al programa varios parametros estos se ejecutan uno detras de otro. 
+Al introducir números cuyo valor es inferior a 3, el programa realiza un correcto control de errores y muestra el mensaje "Longitud [valor] incorrecta" por pantalla.
 
-Al no introducir parametros el programa muestra los mensajes "true\n false" los cuales muestra siempre al finalizar la ejecucion.
+Al pasarle al programa varios parámetros estos se ejecutan uno detrás de otro. 
 
-Finalmente al introducir caracteres como por ejemplo "a" o numeros decimales como 5.5, nos da un error de ejcución, por lo tanto, debería implementarse un control de errores que detecte que el argumento de entrada sea un entero y te de un mensaje de error.
+Al no introducir parametros el programa muestra los mensajes "true\n false" los cuales muestra siempre al finalizar la ejecución.
 
-Como mejoras es necesario realizar un mejor control de errores, para gestionar correctamente los parametros erroneos asi como la falta de estos (dandole al usuario la forma de usar el programa correctamente). Tambien se deberia evitar mostrar siempre "true\n false" al terminar la ejecucion debido a que esta informacion no es relevante para el usuario.
+Finalmente al introducir caracteres como por ejemplo "a" o numeros decimales como 5.5, nos da un error de ejcución, por lo tanto, 
+debería implementarse un control de errores que detecte que el argumento de entrada sea un entero y te de un mensaje de error.
+
+Como mejoras es necesario realizar un mejor control de errores, para gestionar correctamente los parametros erróneos asi como la falta de estos (dandole al usuario
+la forma de usar el programa correctamente). También se debería evitar mostrar siempre "true\n false" al terminar la ejecucion debido a que esta informacion no es relevante para el usuario.
+
+Cuestión del apartado 4:
+
+El método esSecuencia() de este apartado es de objeto, ya que no ha sido declarado con "static". Además, según está implementado el código, si se declarara como método de clase
+daría error de compilación.
