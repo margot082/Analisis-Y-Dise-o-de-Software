@@ -36,12 +36,12 @@ _+COSTE_MOTOR: double = 20.0 {constante}_
 </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>170</x><y>240</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>330</x><y>240</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>UMLClass</id><coordinates><x>270</x><y>540</y><w>310</w><h>260</h></coordinates><panel_attributes>LanchaCompeticion
 --
 -catamaran: boolean
-_+CAPACIDAD: int = 1 {constante}_
-_+DIMENSIONES: double = 49.0 {constante}_
-_+NUM_MOTORES: int = 1 {constante}_
-_+TIPO_MOTOR: TipoMotor = GASOLINA {constante}_
-_+COSTE_LANCHA: double = 200.0 {constante}_
-_+EXTRA_CATAMARAN: double = 50.0 {constante}_
+_-CAPACIDAD: int = 1 {constante}_
+_-DIMENSIONES: double = 49.0 {constante}_
+_-NUM_MOTORES: int = 1 {constante}_
+_-TIPO_MOTOR: TipoMotor = GASOLINA {constante}_
+_-COSTE_LANCHA: double = 200.0 {constante}_
+_-EXTRA_CATAMARAN: double = 50.0 {constante}_
 --
 +LanchaCompeticio(nombre: String,
  			                        										CAPACIDAD, 

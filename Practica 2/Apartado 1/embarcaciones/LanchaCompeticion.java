@@ -13,12 +13,12 @@ public class LanchaCompeticion extends EmbarcacionMotor
     private boolean catamaran;
 
     /* Constantes usadas para inicializar LanchaCompeticion.*/
-    public static final int CAPACIDAD = 1;
-    public static final double DIMENSIONES = 49.0;
-    public static final int NUM_MOTORES = 1;
-    public static final TipoMotor TIPO_MOTOR = TipoMotor.GASOLINA;
-    public static final double COSTE_LANCAHA = 200.0;
-    public static final double EXTRA_CATAMARAN = 50.0;
+    private static final int CAPACIDAD = 1;
+    private static final double DIMENSIONES = 49.0;
+    private static final int NUM_MOTORES = 1;
+    private static final TipoMotor TIPO_MOTOR = TipoMotor.GASOLINA;
+    private static final double COSTE_LANCHA = 200.0;
+    private static final double EXTRA_CATAMARAN = 50.0;
 
     /**
      * Método constructor del objeto.
@@ -44,7 +44,7 @@ public class LanchaCompeticion extends EmbarcacionMotor
 	@Override 
 	public double getCoste() 
 	{   
-        if(catamaran) return COSTE_LANCAHA + EXTRA_CATAMARAN;
-        return COSTE_LANCAHA;
+        if(catamaran) return COSTE_LANCHA + EXTRA_CATAMARAN;
+        return COSTE_LANCHA;
 	}
 }
