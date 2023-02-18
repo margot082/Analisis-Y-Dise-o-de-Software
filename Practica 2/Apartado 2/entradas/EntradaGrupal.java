@@ -6,14 +6,14 @@ import conciertos.Concierto;
 
 public class EntradaGrupal extends Entrada
 {
-    private List<Entrada> entradas;
-    public EntradaGrupal(double precio, Zona zona, Concierto concierto, int numeroEntradas)
+    private List<EntradaIndividual> entradas;
+    public EntradaGrupal()
     {
-        super(precio, zona, concierto);
+
         this.entradas = new ArrayList<Entrada>();
     }
 
-    public void add(Entrada e)
+    public void add(EntradaIndividual e)
     {
         this.entradas.add(e);
     }
@@ -23,7 +23,7 @@ public class EntradaGrupal extends Entrada
     {
         double precioTotal = 0.0;
         int i = 0;
-        for(Entrada entrada : entradas)
+        for(EntradaIndividual entrada : entradas)
         {
             precioTotal += entrada.precioEntrada();
             i += 1;

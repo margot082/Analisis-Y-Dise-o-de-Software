@@ -1,9 +1,8 @@
 package entradas;
 import conciertos.Concierto;
 
-public class EntradaVIP extends Entrada
-{
-    private String dni; 
+public class EntradaVIP extends EntradaIndividual
+{ 
     private String nombrePalco; 
     private int fila; 
     private int columna; 
@@ -12,8 +11,7 @@ public class EntradaVIP extends Entrada
     public EntradaVIP(double precio, Concierto concierto, String dni, String nombrePalco,
                             int fila, int columna, boolean firma)
     {
-        super(precio, Zona.PALCO, concierto);
-        this.dni = dni;
+        super(precio, Zona.PALCO, concierto, dni);
         this.nombrePalco = nombrePalco;
         this.fila = fila;
         this.columna = columna;
