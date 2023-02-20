@@ -1,0 +1,47 @@
+<diagram program="umletino" version="15.0.0"><zoom_level>10</zoom_level><help_text>Canal emitiendo vs canal normal?</help_text><element><id>UMLClass</id><coordinates><x>350</x><y>120</y><w>100</w><h>30</h></coordinates><panel_attributes>Aplicacion</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>350</x><y>210</y><w>100</w><h>60</h></coordinates><panel_attributes>/Usuario/
+--
+-nick: String
+-clave: String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>50</x><y>510</y><w>110</w><h>50</h></coordinates><panel_attributes>Canal
+--
++addRetransmicion(r :Retransmicion): boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>420</x><y>320</y><w>100</w><h>30</h></coordinates><panel_attributes>Administrador</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>190</x><y>320</y><w>100</w><h>30</h></coordinates><panel_attributes>Espectador</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>190</x><y>410</y><w>100</w><h>50</h></coordinates><panel_attributes>Streamer
+--
+-puntos: int
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>190</x><y>340</y><w>90</w><h>90</h></coordinates><panel_attributes>lt=&lt;-
+m1=* sigue
+m2=* seguidor</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>340</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>130</x><y>450</y><w>140</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1= dueño
+m2= canal</panel_attributes><additional_attributes>80;10;80;30;10;30;10;60</additional_attributes></element><element><id>UMLClass</id><coordinates><x>360</x><y>530</y><w>100</w><h>30</h></coordinates><panel_attributes>Retransmicion
+--
++getEspectadores(): List &lt;Espectador&gt;
++addEspectador(newEspectador: Espectador): boolean
++removeEspectador(espectador: Espectador): boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>210</x><y>620</y><w>100</w><h>50</h></coordinates><panel_attributes>/Categoria/
+-nombre: String
+--
++Categoria(nombre: String) {constructor}
++getCanales(): List &lt;Canal&gt;
++addCanal(newCanal: Canal): boolean
++removeCanal(canal: Canal): boolean
++getJuegos(): List &lt;Juego&gt;
++addJuego(newJuego: Juego): boolean
++removeJuego(juego: Juego): boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>150</x><y>700</y><w>100</w><h>30</h></coordinates><panel_attributes>CategoriaHoja</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>260</x><y>700</y><w>130</w><h>30</h></coordinates><panel_attributes>CategoriaComposite
+--
++CategoriaComposite(nombre: String) {constructor}
++addSubcategoria(subcategoria: Categoria)
++removeSubcategoria(subcategoria: Categoria)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>300</x><y>340</y><w>280</w><h>320</h></coordinates><panel_attributes>lt=&lt;-&gt;
+m2=*categorias
+m1=responsable</panel_attributes><additional_attributes>190;10;190;290;10;290</additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>660</y><w>30</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;40</additional_attributes></element><element><id>Relation</id><coordinates><x>300</x><y>640</y><w>140</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+
+m2=* subcategoria</panel_attributes><additional_attributes>90;80;120;80;120;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>230</x><y>660</y><w>30</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;40</additional_attributes></element><element><id>Relation</id><coordinates><x>90</x><y>620</y><w>140</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=* canales</panel_attributes><additional_attributes>120;20;10;20;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>150</x><y>530</y><w>230</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=1..* retransmiciones</panel_attributes><additional_attributes>10;10;210;10</additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>330</y><w>230</w><h>220</h></coordinates><panel_attributes>lt=&lt;-&gt;
+m1=*espectadores
+m2=retransmicion</panel_attributes><additional_attributes>10;10;130;10;130;200</additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>260</y><w>110</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>90;10;90;60;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>420</x><y>260</y><w>30</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>390</x><y>140</y><w>90</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=* usuarios</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>100</x><y>120</y><w>270</w><h>410</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>250;10;10;10;10;390</additional_attributes></element><element><id>UMLClass</id><coordinates><x>50</x><y>600</y><w>100</w><h>30</h></coordinates><panel_attributes>CanalEmitiendo
+--
++endRetransmicion(): boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>210</x><y>560</y><w>100</w><h>30</h></coordinates><panel_attributes>Juegos</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>70</x><y>550</y><w>30</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>100</x><y>550</y><w>50</w><h>70</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..1</panel_attributes><additional_attributes>10;50;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>250</x><y>580</y><w>30</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;40;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>250</x><y>130</y><w>120</w><h>450</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>100;10;10;430</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>400</y><w>100</w><h>30</h></coordinates><panel_attributes>Subscripcion
+--
+-precio: int
+--
++getPrecio(): int
++setPrecio(p: int): boolean</panel_attributes><additional_attributes></additional_attributes></element></diagram>
